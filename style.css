@@ -1,0 +1,583 @@
+/* ==========================================================================
+   RESET & VARIABLES GLOBALES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #FAF6F0;
+    --bg-card: #FFFFFF;
+    --text-dark: #2B2320;
+    --text-muted: #7A6F6B;
+    --accent-pink: #E8B4B8;
+    --accent-rose-dark: #C2848A;
+    --accent-gold: #D4AF37;
+    --whatsapp-green: #25D366;
+    --whatsapp-hover: #1EBE57;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --shadow-soft: 0 10px 30px rgba(194, 132, 138, 0.08);
+    --shadow-hover: 0 18px 40px rgba(194, 132, 138, 0.18);
+    --transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   TOP BAR & HEADER
+   ========================================================================== */
+.top-bar {
+    background-color: var(--text-dark);
+    color: #FDFBF7;
+    text-align: center;
+    padding: 9px 15px;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(250, 246, 240, 0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(232, 180, 184, 0.25);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 8%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--accent-rose-dark);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent-rose-dark);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: var(--accent-rose-dark);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero {
+    min-height: 85vh;
+    background: linear-gradient(135deg, rgba(43, 35, 32, 0.55), rgba(194, 132, 138, 0.35)),
+                url('../imagenes/logo.jpeg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero .subtitle {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #F8E5E7;
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3.8rem;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 22px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero p {
+    font-size: 1.05rem;
+    font-weight: 300;
+    margin-bottom: 38px;
+    color: #F3ECE7;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 16px 42px;
+    background-color: var(--accent-rose-dark);
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: var(--transition);
+    box-shadow: 0 6px 20px rgba(194, 132, 138, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: var(--text-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+   TITULOS DE SECCION
+   ========================================================================== */
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.7rem;
+    text-align: center;
+    margin-top: 70px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-top: 8px;
+    margin-bottom: 45px;
+}
+
+/* ==========================================================================
+   SERVICIOS
+   ========================================================================== */
+.services {
+    max-width: 1250px;
+    margin: 0 auto 90px auto;
+    padding: 0 20px;
+}
+
+.grid-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 32px;
+}
+
+.service-card {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(232, 180, 184, 0.2);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.service-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--accent-rose-dark);
+    color: #FFFFFF;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    z-index: 10;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.service-badge.gold {
+    background-color: var(--accent-gold);
+}
+
+.service-img {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    transition: var(--transition);
+}
+
+.img-semi { background-image: url('../imagenes/Esmaltado-semipermanente.jpeg'); }
+.img-kapping { background-image: url('../imagenes/capping-gel.jpeg'); }
+.img-esculpidas { background-image: url('../imagenes/soft-gel.jpeg'); }
+
+.precio-linea {
+  display: flex;
+  justify-content: space-between; /* Empuja un texto a cada extremo */
+  width: 100%;                  /* Asegura que cubra el mismo ancho */
+  max-width: 400px;             /* (Opcional) Define un ancho máximo si es necesario */
+  margin: 10px auto;            /* Centra el bloque entero en la página */
+  border-bottom: 1px dashed #ccc; /* (Opcional) Línea punteada estética entre nombre y precio */
+}
+.service-card:hover .service-img {
+    transform: scale(1.05);
+}
+
+.service-info {
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.service-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.service-info p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.service-features {
+    list-style: none;
+    margin-bottom: 25px;
+    margin-top: auto;
+}
+
+.service-features li {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.service-features li::before {
+    content: "✦";
+    color: var(--accent-rose-dark);
+    font-size: 0.8rem;
+}
+
+.btn-card {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: var(--bg-primary);
+    color: var(--text-dark);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: var(--transition);
+    border: 1px solid rgba(194, 132, 138, 0.3);
+}
+
+.btn-card:hover {
+    background-color: var(--accent-rose-dark);
+    color: #FFFFFF;
+    border-color: var(--accent-rose-dark);
+}
+
+/* ==========================================================================
+   GALERIA DE DISEÑOS
+   ========================================================================== */
+.gallery {
+    max-width: 1250px;
+    margin: 0 auto 90px auto;
+    padding: 0 20px;
+}
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--shadow-soft);
+}
+
+.item-1 { background-image: url('../imagenes/img1.jpeg'); }
+.item-2 { background-image: url('../imagenes/img2.jpeg'); }
+.item-3 { background-image: url('../imagenes/img3.jpeg'); }
+.item-4 { background-image: url('../imagenes/img4.jpeg'); }
+.item-5 { background-image: url('../imagenes/img5.jpeg'); }
+.item-6 { background-image: url('../imagenes/img6.jpeg'); }
+.item-7 { background-image: url('../imagenes/img7.jpeg'); }
+.item-8 { background-image: url('../imagenes/img8.jpeg'); }
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(43, 35, 32, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-overlay span {
+    color: #FFFFFF;
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    transform: translateY(15px);
+    transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .gallery-overlay span {
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   BANNER INFORMATIVO
+   ========================================================================== */
+.info-banner {
+    background-color: #F2E9E1;
+    padding: 80px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(232, 180, 184, 0.3);
+    border-bottom: 1px solid rgba(232, 180, 184, 0.3);
+}
+
+.banner-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.banner-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.3rem;
+    margin-bottom: 16px;
+    color: var(--text-dark);
+}
+
+.banner-content p {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   BOTON FLOTANTE WHATSAPP
+   ========================================================================== */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--whatsapp-green);
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: var(--whatsapp-hover);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-icon {
+    width: 32px;
+    height: 32px;
+    fill: #FFFFFF;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+    background-color: #1F1917;
+    color: #FFFFFF;
+    padding: 80px 20px 35px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-family: var(--font-heading);
+    font-size: 2.6rem;
+    letter-spacing: 1px;
+    color: var(--accent-pink);
+    line-height: 1;
+}
+
+.footer-sublogo {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #A0948F;
+    margin-top: 5px;
+    margin-bottom: 28px;
+}
+
+.motivational-quote {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.35rem;
+    line-height: 1.6;
+    color: #E8DFD8;
+    margin-bottom: 45px;
+    padding: 0 15px;
+}
+
+.contact-box {
+    background-color: #2A221F;
+    padding: 35px 25px;
+    border-radius: 12px;
+    border: 1px solid #3D322E;
+    margin-bottom: 55px;
+}
+
+.contact-box p {
+    font-size: 0.95rem;
+    color: #C2B5AF;
+    margin-bottom: 18px;
+}
+
+.btn-whatsapp-footer {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--whatsapp-green);
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 14px 35px;
+    border-radius: 40px;
+    transition: var(--transition);
+}
+
+.btn-whatsapp-footer span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-whatsapp-footer strong {
+    font-size: 1.15rem;
+}
+
+.btn-whatsapp-footer:hover {
+    background-color: var(--whatsapp-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+}
+
+.footer-bottom {
+    border-top: 1px solid #2D2421;
+    padding-top: 30px;
+    font-size: 0.78rem;
+    color: #827570;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .section-title {
+        font-size: 2.1rem;
+    }
+
+    .motivational-quote {
+        font-size: 1.15rem;
+    }
+}

@@ -124,7 +124,7 @@ body {
 .hero {
     min-height: 85vh;
     background: linear-gradient(135deg, rgba(43, 35, 32, 0.55), rgba(194, 132, 138, 0.35)),
-                url('../imagenes/logo.jpeg') center/cover no-repeat;
+                url('imagenes/logo.jpeg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -265,9 +265,9 @@ body {
     transition: var(--transition);
 }
 
-.img-semi { background-image: url('../imagenes/Esmaltado-semipermanente.jpeg'); }
-.img-kapping { background-image: url('../imagenes/capping-gel.jpeg'); }
-.img-esculpidas { background-image: url('../imagenes/soft-gel.jpeg'); }
+.img-semi { background-image: url('imagenes/Esmaltado-semipermanente.jpeg'); }
+.img-kapping { background-image: url('imagenes/capping-gel.jpeg'); }
+.img-esculpidas { background-image: url('imagenes/soft-gel.jpeg'); }
 
 .precio-linea {
   display: flex;
@@ -369,14 +369,14 @@ body {
     box-shadow: var(--shadow-soft);
 }
 
-.item-1 { background-image: url('../imagenes/img1.jpeg'); }
-.item-2 { background-image: url('../imagenes/img2.jpeg'); }
-.item-3 { background-image: url('../imagenes/img3.jpeg'); }
-.item-4 { background-image: url('../imagenes/img4.jpeg'); }
-.item-5 { background-image: url('../imagenes/img5.jpeg'); }
-.item-6 { background-image: url('../imagenes/img6.jpeg'); }
-.item-7 { background-image: url('../imagenes/img7.jpeg'); }
-.item-8 { background-image: url('../imagenes/img8.jpeg'); }
+.item-1 { background-image: url('imagenes/img1.jpeg'); }
+.item-2 { background-image: url('imagenes/img2.jpeg'); }
+.item-3 { background-image: url('imagenes/img3.jpeg'); }
+.item-4 { background-image: url('imagenes/img4.jpeg'); }
+.item-5 { background-image: url('imagenes/img5.jpeg'); }
+.item-6 { background-image: url('imagenes/img6.jpeg'); }
+.item-7 { background-image: url('imagenes/img7.jpeg'); }
+.item-8 { background-image: url('imagenes/img8.jpeg'); }
 
 .gallery-overlay {
     position: absolute;

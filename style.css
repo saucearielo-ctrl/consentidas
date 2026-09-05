@@ -124,7 +124,7 @@ body {
 .hero {
     min-height: 85vh;
     background: linear-gradient(5deg, rgba(245, 242, 239, 0.55), rgba(240, 176, 182, 0.35)),
-                url('imagenes/logo1.jpeg') center no-repeat;
+                url('imagenes/logo1.jpeg') center / contain no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;

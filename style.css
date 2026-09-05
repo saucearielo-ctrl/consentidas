@@ -154,6 +154,7 @@ body {
     line-height: 1.15;
     margin-bottom: 22px;
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform:translateY(-300px)
 }
 
 .hero p {

@@ -9,7 +9,7 @@
 
 :root {
     --bg-primary: #FAF6F0;
-    --bg-card: #FFFFFF;
+    --bg-card: #eaeee1;
     --text-dark: #2B2320;
     --text-muted: #7A6F6B;
     --accent-pink: #E8B4B8;
@@ -123,14 +123,14 @@ body {
    ========================================================================== */
 .hero {
     min-height: 85vh;
-    background: linear-gradient(135deg, rgba(43, 35, 32, 0.55), rgba(194, 132, 138, 0.35)),
-                url('imagenes/logo.jpeg') center/cover no-repeat;
+    background: linear-gradient(5deg, rgba(245, 242, 239, 0.55), rgba(240, 176, 182, 0.35)),
+                url('imagenes/logo1.jpeg') center no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #FFFFFF;
-    padding: 60px 20px;
+    color: #022e28;
+    padding: 40px 20px;
 }
 
 .hero-content {
@@ -141,7 +141,7 @@ body {
     font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #F8E5E7;
+    color: #022e28;
     display: block;
     margin-bottom: 15px;
     font-weight: 500;
@@ -160,7 +160,7 @@ body {
     font-size: 1.05rem;
     font-weight: 300;
     margin-bottom: 38px;
-    color: #F3ECE7;
+    color: #022e28;
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
@@ -244,7 +244,7 @@ body {
     top: 15px;
     left: 15px;
     background-color: var(--accent-rose-dark);
-    color: #FFFFFF;
+    color: #03032b;
     font-size: 0.68rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -416,6 +416,13 @@ body {
     text-align: center;
     border-top: 1px solid rgba(232, 180, 184, 0.3);
     border-bottom: 1px solid rgba(232, 180, 184, 0.3);
+}
+
+.bio p{
+    text-align: left;
+    margin-bottom: 1em;
+    line-height: 1.6;
+
 }
 
 .banner-content {

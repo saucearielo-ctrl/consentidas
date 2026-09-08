@@ -146,9 +146,9 @@ body {
 }
 .service-badge.gold { background: #c5a46a; }
 .service-img { height: 220px; background-size: cover; background-position: center; background-color: #f5efe6; }
-.img-semi { background-image: url('imagenes/semi.jpg'); }
-.img-kapping { background-image: url('imagenes/kapping.jpg'); }
-.img-esculpidas { background-image: url('imagenes/softgel.jpg'); }
+.img-semi { background-image: url('imagenes/Esmaltado-semipermanente.jpeg'); }
+.img-kapping { background-image: url('imagenes/capping-gel.jpeg'); }
+.img-esculpidas { background-image: url('imagenes/soft-gel.jpeg'); }
 .service-info { padding: 24px; }
 .service-info h3 { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 8px; }
 .service-info p { font-size: 14px; opacity: .75; margin-bottom: 16px; }
@@ -177,10 +177,14 @@ body {
     background-color: #f5efe6; background-size: cover; background-position: center;
     position: relative; overflow: hidden;
 }
-.item-1 { background-image: url('imagenes/diseno1.jpg'); } .item-2 { background-image: url('imagenes/diseno2.jpg'); }
-.item-3 { background-image: url('imagenes/diseno3.jpg'); } .item-4 { background-image: url('imagenes/diseno4.jpg'); }
-.item-5 { background-image: url('imagenes/diseno5.jpg'); } .item-6 { background-image: url('imagenes/diseno6.jpg'); }
-.item-7 { background-image: url('imagenes/diseno7.jpg'); } .item-8 { background-image: url('imagenes/diseno8.jpg'); }
+.item-1 { background-image: url('imagenes/img1.jpeg'); }
+.item-2 { background-image: url('imagenes/img2.jpeg'); }
+.item-3 { background-image: url('imagenes/img3.jpeg'); }
+.item-4 { background-image: url('imagenes/img4.jpeg'); }
+.item-5 { background-image: url('imagenes/img5.jpeg'); }
+.item-6 { background-image: url('imagenes/img6.jpeg'); }
+.item-7 { background-image: url('imagenes/img7.jpeg'); }
+.item-8 { background-image: url('imagenes/img8.jpeg'); }
 .gallery-overlay {
     position: absolute; inset: 0;
     background: linear-gradient(0deg, rgba(2,46,40,.7) 0%, transparent 60%);

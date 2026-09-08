@@ -11,6 +11,7 @@
     --bg-primary: #FAF6F0;
     --bg-card: #eaeee1;
     --text-dark: #2B2320;
+    --text-violeta: #26042e;
     --text-muted: #7A6F6B;
     --accent-pink: #E8B4B8;
     --accent-rose-dark: #C2848A;
@@ -122,76 +123,77 @@ body {
    HERO SECTION
    ========================================================================== */
 .hero {
-    min-height: 85vh;
-    background: linear-gradient(5deg, rgba(245, 242, 239, 0.55), rgba(240, 176, 182, 0.35)),
-                url('imagenes/logo1.jpeg') center / contain no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #022e28;
-    padding: 40px 20px;
+    position: relative; /* el padre SIEMPRE relative */
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute; /* NO relative */
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+}
+@media (max-width: 768px) {
+    .hero-video {
+        object-fit: contain;
+        background-color: #fdfbf7;
+    }
+}
+
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:0; /*rgba(253, 251, 247, 0.25);  velo suave para que se lea el texto */
+    z-index: 2;
 }
 
 .hero-content {
-    max-width: 800px;
+    position: relative;
+    z-index: 3;
+    max-width: 10px;
 }
 
-.hero .subtitle {
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #022e28;
-    display: block;
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-
-.hero h1 {
-    font-family: var(--font-heading);
-    font-size: 3.8rem;
-    font-weight: 400;
-    line-height: 1.15;
-    margin-bottom: 22px;
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    
-}
-
-.hero p {
-    font-size: 1.05rem;
-    font-weight: 300;
-    margin-bottom: 38px;
-    color: #022e28;
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.btn-primary {
+.btn-reserva {
     display: inline-block;
-    padding: 16px 42px;
-    background-color: var(--accent-rose-dark);
-    color: #FFFFFF;
+    margin-top: 20px;
+    padding: 14px 32px;
+    background: #c5a46a; /* tu dorado del logo */
+    color: #fff;
+    border-radius: 30px;
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.82rem;
-    letter-spacing: 2px;
     font-weight: 600;
-    border-radius: 50px;
-    transition: var(--transition);
-    box-shadow: 0 6px 20px rgba(194, 132, 138, 0.4);
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-    background-color: var(--text-dark);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+.btn-reserva:hover {
+    background: #022e28;
+    transform: translateY(-2px);
 }
 
 /* ==========================================================================
    TITULOS DE SECCION
    ========================================================================== */
-.section-title {
+.section-title1 {
+    font-family: var(--font-heading);
+    font-size: 2.7rem;
+    text-align: center;
+    margin-top: 70px;
+    font-weight: 600;
+    color: var(--text-violeta);
+}
+
+
+   .section-title {
     font-family: var(--font-heading);
     font-size: 2.7rem;
     text-align: center;

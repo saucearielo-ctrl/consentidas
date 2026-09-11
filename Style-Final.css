@@ -179,10 +179,10 @@ body {
     background-color: #f5efe6; background-size: cover; background-position: center;
     position: relative; overflow: hidden;
 }
-.item-1 { background-image: url('imagenes/diseno1.jpg'); } .item-2 { background-image: url('imagenes/diseno2.jpg'); }
-.item-3 { background-image: url('imagenes/diseno3.jpg'); } .item-4 { background-image: url('imagenes/diseno4.jpg'); }
-.item-5 { background-image: url('imagenes/diseno5.jpg'); } .item-6 { background-image: url('imagenes/diseno6.jpg'); }
-.item-7 { background-image: url('imagenes/diseno7.jpg'); } .item-8 { background-image: url('imagenes/diseno8.jpg'); }
+.item-1 { background-image: url('imagenes/img1.jpg'); } .item-2 { background-image: url('imagenes/img2.jpg'); }
+.item-3 { background-image: url('imagenes/img3.jpg'); } .item-4 { background-image: url('imagenes/img4.jpg'); }
+.item-5 { background-image: url('imagenes/img5.jpg'); } .item-6 { background-image: url('imagenes/img6.jpg'); }
+.item-7 { background-image: url('imagenes/img7.jpg'); } .item-8 { background-image: url('imagenes/img8.jpg'); }
 .gallery-overlay {
     position: absolute; inset: 0;
     background: linear-gradient(0deg, rgba(2,46,40,.7) 0%, transparent 60%);

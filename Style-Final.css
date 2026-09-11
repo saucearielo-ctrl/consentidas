@@ -1,0 +1,271 @@
+/* =================================================
+   CONSENTIDAS NAILS - FINAL RESPONSIVE
+   Hero solo con logo animado, sin texto
+   ================================================= */
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #fdfbf7;
+    color: #022e28;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Top bar */
+.top-bar {
+    background: #022e28;
+    color: #fdfbf7;
+    text-align: center;
+    padding: 8px 15px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(253,251,247,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(197,164,106,0.15);
+}
+.navbar {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #022e28;
+    text-decoration: none;
+}
+.logo span { color: #c5a46a; font-weight: 400; font-style: italic; }
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #022e28;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color .3s;
+}
+.nav-links a:hover { color: #c5a46a; }
+.nav-cta {
+    padding: 10px 22px;
+    background: #022e28;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   HERO - SOLO VIDEO LOGO - 100% RESPONSIVE
+   ========================================= */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 950px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fdfbf7;
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    max-width: 900px; /* Limita el tamaño en PC gigante */
+    object-fit: contain; /* CLAVE: muestra TODO el logo sin recortar */
+    object-position: center;
+}
+
+/* ========================================= */
+/* Services */
+.services {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 20px;
+    text-align: center;
+}
+.section-title1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: #c5a46a;
+    margin-bottom: 8px;
+}
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 12px;
+}
+.section-subtitle { opacity: .7; margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+.grid-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+.service-card {
+    background: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid rgba(197,164,106,.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,.04);
+    transition: transform .3s;
+    position: relative;
+}
+.service-card:hover { transform: translateY(-6px); }
+.service-badge {
+    position: absolute; top: 14px; left: 14px;
+    background: #022e28; color: #fff;
+    padding: 6px 12px; border-radius: 20px;
+    font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+    z-index: 2;
+}
+.service-badge.gold { background: #c5a46a; }
+.service-img { height: 200%; background-size: cover; background-position: center; background-color: #f5efe6; }
+.img-semi { background-image: url('imagenes/Esmaltado-semipermanente.jpeg'); }
+.img-kapping { background-image: url('imagenes/capping-gel.jpeg'); }
+.img-esculpidas { background-image: url('imagenes/soft-gel.jpeg'); }
+.img-extras { background-image: url('imagenes/apliques.jpeg'); }
+.img-retiros { background-image: url('imagenes/retiros.jpeg'); }
+.service-info { padding: 24px; }
+.service-info h3 { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 8px; }
+.service-info p { font-size: 14px; opacity: .75; margin-bottom: 16px; }
+.service-features { list-style: none; margin-bottom: 18px; }
+.service-features li { font-size: 13px; padding: 4px 0 4px 20px; position: relative; }
+.service-features li::before { content: "✓"; position: absolute; left: 0; color: #c5a46a; font-weight: bold; }
+.precios { border-top: 1px dashed rgba(197,164,106,.3); padding-top: 12px; margin-bottom: 18px; }
+.precio-linea { display: flex; justify-content: space-between; font-size: 14px; font-weight: 600; padding: 6px 0; }
+.precio-linea span:last-child { color: #c5a46a; }
+.btn-card {
+    display: block; text-align: center; padding: 12px;
+    border: 1.5px solid #022e28; border-radius: 30px;
+    text-decoration: none; color: #022e28;
+    font-weight: 600; font-size: 13px; transition: all .3s;
+}
+.btn-card:hover { background: #022e28; color: #fff; }
+
+/* Gallery */
+.gallery { padding: 80px 20px; background: #fff; text-align: center; }
+.grid-gallery {
+    max-width: 1200px; margin: 40px auto 0;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 16px;
+}
+.gallery-item {
+    height: 280px; border-radius: 18px;
+    background-color: #f5efe6; background-size: cover; background-position: center;
+    position: relative; overflow: hidden;
+}
+.item-1 { background-image: url('imagenes/diseno1.jpg'); } .item-2 { background-image: url('imagenes/diseno2.jpg'); }
+.item-3 { background-image: url('imagenes/diseno3.jpg'); } .item-4 { background-image: url('imagenes/diseno4.jpg'); }
+.item-5 { background-image: url('imagenes/diseno5.jpg'); } .item-6 { background-image: url('imagenes/diseno6.jpg'); }
+.item-7 { background-image: url('imagenes/diseno7.jpg'); } .item-8 { background-image: url('imagenes/diseno8.jpg'); }
+.gallery-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(0deg, rgba(2,46,40,.7) 0%, transparent 60%);
+    display: flex; align-items: flex-end; padding: 18px;
+    opacity: 0; transition: opacity .3s;
+}
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+.gallery-overlay span { color: #fff; font-size: 13px; text-align: left; }
+
+/* Bio */
+.info-banner { max-width: 900px; margin: 0 auto; padding: 80px 20px; text-align: center; }
+.info-banner h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 20px; }
+.bio p { margin-bottom: 14px; opacity: .85; }
+.botones-redes { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 30px; }
+.btn-redes {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 20px; border-radius: 30px; text-decoration: none;
+    font-size: 14px; font-weight: 600; transition: transform .2s;
+}
+.btn-redes:hover { transform: translateY(-2px); }
+.btn-maps { background: #022e28; color: #fff; }
+.btn-instagram, .btn-facebook { background: #fff; color: #022e28; border: 1.5px solid rgba(0,0,0,.1); }
+
+/* Footer */
+.footer { background: #022e28; color: #fdfbf7; padding: 60px 20px 30px; text-align: center; }
+.footer-logo { font-family: 'Playfair Display', serif; font-size: 32px; }
+.footer-sublogo { color: #c5a46a; letter-spacing: 4px; text-transform: uppercase; font-size: 12px; }
+.motivational-quote { max-width: 700px; margin: 24px auto; font-style: italic; opacity: .8; }
+.contact-box { margin: 30px auto; }
+.btn-whatsapp-footer { display: inline-block; background: #c5a46a; color: #fff; padding: 14px 28px; border-radius: 30px; text-decoration: none; margin-top: 12px; }
+.footer-bottom { margin-top: 40px; border-top: 1px solid rgba(255,255,255,.1); padding-top: 20px; font-size: 12px; opacity: .6; }
+
+.whatsapp-float {
+    position: fixed; bottom: 20px; right: 20px;
+    width: 58px; height: 58px; background: #25D366; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,.2); z-index: 200; transition: transform .2s;
+}
+.whatsapp-float:hover { transform: scale(1.1); }
+.whatsapp-icon { width: 30px; height: 30px; fill: #fff; }
+
+/* =========================================================
+   RESPONSIVE - SE ADAPTA A CUALQUIER DISPOSITIVO
+   ========================================================= */
+@media (max-width: 1024px) {
+    .hero { height: 85vh; min-height: 600px; }
+    .hero-video { max-width: 80vw; }
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-cta { display: none; }
+    
+    .hero {
+        height: 75vh;
+        min-height: 500px;
+        max-height: 700px;
+        padding: 20px;
+    }
+    .hero-video {
+        max-width: 90vw; /* 90% del ancho del celular */
+        max-height: 70vh;
+        width: 100%;
+        height: auto;
+    }
+
+    .grid-services { grid-template-columns: 1fr; }
+    .services, .gallery, .info-banner { padding: 60px 16px; }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 65vh;
+        min-height: 420px;
+    }
+    .hero-video {
+        max-width: 92vw;
+    }
+    .top-bar { font-size: 11px; padding: 8px 10px; }
+    .logo { font-size: 22px; }
+}
+
+/* Para pantallas gigantes 4K */
+@media (min-width: 1600px) {
+    .hero-video { max-width: 800px; }
+}

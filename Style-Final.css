@@ -149,8 +149,8 @@ body {
 .img-semi { background-image: url('imagenes/Esmaltado-semipermanente.jpeg'); }
 .img-kapping { background-image: url('imagenes/capping-gel.jpeg'); }
 .img-esculpidas { background-image: url('imagenes/soft-gel.jpeg'); }
-.img-extras { background-image: url('imagenes/apliques.jpeg'); }
-.img-retiros { background-image: url('imagenes/retiros.jpeg'); }
+.img-extras { background-image: url('imagenes/aplique.jpeg'); }
+.img-retiros { background-image: url('imagenes/retiro.jpeg'); }
 .service-info { padding: 24px; }
 .service-info h3 { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 8px; }
 .service-info p { font-size: 14px; opacity: .75; margin-bottom: 16px; }

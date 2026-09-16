@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
+<script src="script.js" defer></script>
     <div class="top-bar">
         <span>💅 Agenda tu turno online | Diseños personalizados y el mejor cuidado para tus uñas</span>
     </div>
@@ -142,19 +142,64 @@
     </section>
 
     <section class="gallery" id="galeria">
-        <h2 class="section-title">Galería de Diseños</h2>
-        <p class="section-subtitle">Cada detalle cuenta: inspírate con nuestros últimos trabajos</p>
-        <div class="grid-gallery">
-            <div class="gallery-item item-1"><div class="gallery-overlay"><span>Boho Chic / Místico</span></div></div>
-            <div class="gallery-item item-2"><div class="gallery-overlay"><span>Y2K / Coquette</span></div></div>
-            <div class="gallery-item item-3"><div class="gallery-overlay"><span>Glam / Festivo</span></div></div>
-            <div class="gallery-item item-4"><div class="gallery-overlay"><span>Romantic Minimalist</span></div></div>
-            <div class="gallery-item item-5"><div class="gallery-overlay"><span>Dark Elegant</span></div></div>
-            <div class="gallery-item item-6"><div class="gallery-overlay"><span>Retro 70s</span></div></div>
-            <div class="gallery-item item-7"><div class="gallery-overlay"><span>Elegante Clásico</span></div></div>
-            <div class="gallery-item item-8"><div class="gallery-overlay"><span>Floral 3D</span></div></div>
+    <h2 class="section-title">Galería de Diseños</h2>
+    <p class="section-subtitle">Cada detalle cuenta: inspírate con nuestros últimos trabajos</p>
+    
+    <!-- Contenedor general del slider -->
+    <div class="slider-container">
+        <!-- Botón izquierdo (opcional para PC) -->
+        <button class="slider-btn prev-btn" aria-label="Anterior">&#10094;</button>
+
+        <!-- Pista deslizable -->
+        <div class="gallery-slider" id="gallerySlider">
+            <div class="gallery-item item-1">
+                <div class="gallery-overlay"><span>Boho Chic / Místico</span></div>
+            </div>
+            <div class="gallery-item item-2">
+                <div class="gallery-overlay"><span>Y2K / Coquette</span></div>
+            </div>
+            <div class="gallery-item item-3">
+                <div class="gallery-overlay"><span>Glam / Festivo</span></div>
+            </div>
+            <div class="gallery-item item-4">
+                <div class="gallery-overlay"><span>Romantic Minimalist</span></div>
+            </div>
+            <div class="gallery-item item-5">
+                <div class="gallery-overlay"><span>Dark Elegant</span></div>
+            </div>
+            <div class="gallery-item item-6">
+                <div class="gallery-overlay"><span>Retro 70s</span></div>
+            </div>
+            <div class="gallery-item item-7">
+                <div class="gallery-overlay"><span>Elegante Clásico</span></div>
+            </div>
+            <div class="gallery-item item-8">
+                <div class="gallery-overlay"><span>Floral 3D</span></div>
+            </div>
+            <div class="gallery-item item-9">
+                <div class="gallery-overlay"><span>Cielo de Maimi</span></div>
+            </div>
+            <div class="gallery-item item-10">
+                <div class="gallery-overlay"><span>Borgoña ceresa</span></div>
+            </div>
+            <div class="gallery-item item-11">
+                <div class="gallery-overlay"><span>Aura Flor Moca</span></div>
+            </div>
+            <div class="gallery-item item-12">
+                <div class="gallery-overlay"><span>Francesita Glaseada</span></div>
+            </div>
+            <div class="gallery-item item-13">
+                <div class="gallery-overlay"><span>Glam Minimalista Nude</span></div>
+            </div>
+            <div class="gallery-item item-14">
+                <div class="gallery-overlay"><span>Estrella de media noche</span></div>
+            </div>
         </div>
-    </section>
+
+        <!-- Botón derecho (opcional para PC) -->
+        <button class="slider-btn next-btn" aria-label="Siguiente">&#10095;</button>
+    </div>
+</section>
 
     <section class="info-banner" id="nosotros">
         <div class="banner-content">

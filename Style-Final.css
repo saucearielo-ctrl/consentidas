@@ -170,27 +170,120 @@ body {
 
 /* Gallery */
 .gallery { padding: 80px 20px; background: #fff; text-align: center; }
-.grid-gallery {
-    max-width: 1200px; margin: 40px auto 0;
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 16px;
+
+/* Contenedor general del slider (reemplaza a la antigua grid-gallery) */
+.slider-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    display: flex;
+    align-items: center;
 }
+
+/* Pista deslizable (lo que antes era .grid-gallery) */
+.gallery-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 10px 5px;
+    width: 100%;
+    scrollbar-width: none; /* Oculta la barra en Firefox */
+}
+
+/* Ocultar barra de desplazamiento en Chrome, Safari y Edge */
+.gallery-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Tus estilos de cada ítem (adaptados para el slider) */
 .gallery-item {
-    height: 280px; border-radius: 18px;
-    background-color: #f5efe6; background-size: cover; background-position: center;
-    position: relative; overflow: hidden;
+    flex: 0 0 280px; /* Ancho fijo para cada tarjeta en el carrusel */
+    height: 320px; 
+    border-radius: 18px;
+    background-color: #f5efe6; 
+    background-size: cover; 
+    background-position: center;
+    position: relative; 
+    overflow: hidden;
+    scroll-snap-align: start; /* Hace que encaje perfecto al deslizar */
+    perspective: 1000px;
+    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
-.item-1 { background-image: url('imagenes/img1.jpeg'); } .item-2 { background-image: url('imagenes/img2.jpeg'); }
-.item-3 { background-image: url('imagenes/img3.jpeg'); } .item-4 { background-image: url('imagenes/img4.jpeg'); }
-.item-5 { background-image: url('imagenes/img5.jpeg'); } .item-6 { background-image: url('imagenes/img6.jpeg'); }
-.item-7 { background-image: url('imagenes/img7.jpeg'); } .item-8 { background-image: url('imagenes/img8.jpeg'); }
+
+.gallery-item:hover {
+    /* Elevación: La tarjeta sube un poco */
+    transform: translateY(-8px) rotateX(5deg) rotateY(-5deg);
+    
+    /* Sombra Profunda: Se agranda y se difumina al elevarse */
+    box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.3);
+}
+
+/* Tus imágenes originales (se conservan tal cual) */
+.item-1 { background-image: url('imagenes/img1.jpeg'); } 
+.item-2 { background-image: url('imagenes/img2.jpeg'); }
+.item-3 { background-image: url('imagenes/img3.jpeg'); } 
+.item-4 { background-image: url('imagenes/img4.jpeg'); }
+.item-5 { background-image: url('imagenes/img5.jpeg'); } 
+.item-6 { background-image: url('imagenes/img6.jpeg'); }
+.item-7 { background-image: url('imagenes/img7.jpeg'); } 
+.item-8 { background-image: url('imagenes/img8.jpeg'); }
+.item-9 { background-image: url('imagenes/img9.jpeg'); } 
+.item-10 { background-image: url('imagenes/img10.jpeg'); }
+.item-11 { background-image: url('imagenes/imag11.jpeg'); } 
+.item-12 { background-image: url('imagenes/img12.jpeg'); }
+.item-13 { background-image: url('imagenes/imag13.jpeg'); }
+.item-14 { background-image: url('imagenes/img14.jpeg'); }
+
+/* Tu efecto hover original para el texto */
 .gallery-overlay {
-    position: absolute; inset: 0;
+    position: absolute; 
+    inset: 0;
     background: linear-gradient(0deg, rgba(2,46,40,.7) 0%, transparent 60%);
-    display: flex; align-items: flex-end; padding: 18px;
-    opacity: 0; transition: opacity .3s;
+    display: flex; 
+    align-items: flex-end; 
+    padding: 18px;
+    opacity: 0; 
+    transition: opacity .3s;
 }
+
 .gallery-item:hover .gallery-overlay { opacity: 1; }
 .gallery-overlay span { color: #fff; font-size: 13px; text-align: left; }
+
+/* Estilos para las flechas de navegación lateral (opcional para PC) */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #022e28;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.slider-btn:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.prev-btn { left: -20px; }
+.next-btn { right: -20px; }
+
+@media (max-width: 768px) {
+    .slider-btn { display: none; } /* En celulares se desliza con el dedo directamente */
+}
 
 /* Bio */
 .info-banner { max-width: 900px; margin: 0 auto; padding: 80px 20px; text-align: center; }

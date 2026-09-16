@@ -362,3 +362,61 @@ body {
 @media (min-width: 1600px) {
     .hero-video { max-width: 800px; }
 }
+
+/* Fondo oscuro que cubre toda la pantalla */
+.lightbox-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro elegante */
+    backdrop-filter: blur(5px); /* Efecto difuminado moderno en el fondo */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Imagen ampliada dentro del modal */
+.lightbox-img {
+    max-width: 90%;
+    max-height: 75vh;
+    border-radius: 12px;
+    object-fit: contain;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+/* Texto del diseño debajo de la imagen ampliada */
+.lightbox-caption {
+    color: #fff;
+    margin-top: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* Botón de cerrar (la "X") */
+.lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.lightbox-close:hover {
+    color: #f5efe6;
+}
+
+/* Animación sutil al abrir */
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
